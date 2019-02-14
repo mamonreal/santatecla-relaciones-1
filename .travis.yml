@@ -5,11 +5,11 @@ jdk:
 install: true
 stage: build
 script: 
-  - cd backend
-  - cd relaciones 
+  - cd backend/relacions
   - mvn clean install
 
 stage: test
 script:
+  - cd backend/relaciones
   - mvn test
 
