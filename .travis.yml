@@ -3,13 +3,8 @@ jdk:
   - oraclejdk8
 
 install: true
-stage: build
 script: 
   - cd backend/relacions
   - mvn clean install
-
-stage: test
-script:
-  - cd backend/relaciones
   - mvn test
 
