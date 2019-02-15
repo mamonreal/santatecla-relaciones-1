@@ -10,6 +10,6 @@ script:
   - mvn clean install
 
 stage: test
+script: 
   - cd backend/relaciones
   - mvn test
-
