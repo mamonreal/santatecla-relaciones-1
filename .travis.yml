@@ -2,6 +2,12 @@ languaje: java
 jdk: 
   - oraclejdk8
 
+addons:
+  sonarcloud:
+    organization: "mamonreal-github"
+    token:
+      secure: $TOKEN_SONARCLOUD
+
 install: true
 
 stage: build
@@ -16,9 +22,5 @@ script:
 
 stage: sonar
 script: 
-  -cd backend/relaciones
-  - mvn sonar:sonar \
-    -Dsonar.projectKey=mamonreal_santatecla-relaciones-1 \
-    -Dsonar.organization=mamonreal-github \
-    -Dsonar.host.url=https://sonarcloud.io \
-    -Dsonar.login=SONARCLOUD
+  - cd backend/relaciones
+  - mvn sonar:sonar
