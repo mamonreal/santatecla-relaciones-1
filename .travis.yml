@@ -13,3 +13,11 @@ stage: test
 script: 
   - cd backend/relaciones
   - mvn test
+
+stage: sonar
+script: 
+  - mvn sonar:sonar \
+    -Dsonar.projectKey=mamonreal_santatecla-relaciones-1 \
+    -Dsonar.organization=mamonreal-github \
+    -Dsonar.host.url=https://sonarcloud.io \
+    -Dsonar.login=$SONARCLOUD

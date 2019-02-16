@@ -24,3 +24,5 @@ nbdist/
 
 ### MAC ##
 .DS_Store
+
+token-sonarcloud
