@@ -1,26 +1,13 @@
 languaje: java
-jdk: 
-  - oraclejdk8
-
+jdk:
+- oraclejdk8
 addons:
   sonarcloud:
     organization: "mamonreal-github"
     token:
-      secure: $TOKEN_SONARCLOUD
-
+      secure: "iDQ6ReGa7k0ZvXfpzSdIWKs5Z0h40bpbFfrWrYXb6AnzVKETJ6fwnjS97hPd3sGQN+0Qv/52aOtDgmHFPdOowpPMcymSsNJ1MxbkEp3vTbx3UJPFi3hfe4GhQJJXH90Lj2FWCWWWoPE17z2JU1oKqKeiG0qHqmli6gXYRjGi46elxP6/IcuiJwmbZmiwKyk0vUqsRGneScIj3m9BZq+XSOyGXp2bckLzsFwrkL9qhfgh6baAEF96BwSgaVvsa4+oMbFdLeXEIGRKN1qtJgKbsl3MpRDNwedqf7D93or6bbvJDtzAeGi3srSbLLAeAhcH82Yt/2pKUqgZcf5lg1NC2OaYZ6q15KGDmG+JZrBHFCvqkHgF20FJdfrhVILLqxD2IFEOVpqkXlWMG6UvyRkFqFG1Xa7xK6NjC9UQ8SiogBNG4IZO6pspewGs5f2T2Fa8tKM3MjGZTPXxEukxTL4fQbVVGgUvpB7pPTlSE8mbsbqCW0LGhVxUiRXx2ti6ibNs33681fYmWV+jtWMcJWd/5QgYkggo+jc1JxNb+bag6GzI/7uzrzhe/k+06f7D+TvQRQw8Kz+yy57s9LYeUZTVRZjtlH5M3vk+ph5KrnhnxUgEVuk1PmfpkCnGBhi/KO+rtR2mbqqmqFyNRRPkA1QGcUiw5/556Zn7yHplIlMeEkE="
 install: true
-
-stage: build
-script: 
-  - cd backend/relaciones
-  - mvn clean install
-
-stage: test
-script: 
-  - cd backend/relaciones
-  - mvn test
-
 stage: sonar
-script: 
-  - cd backend/relaciones
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+script:
+- cd backend/relaciones
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
