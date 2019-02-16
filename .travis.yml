@@ -16,6 +16,7 @@ script:
 
 stage: sonar
 script: 
+  -cd backend/relaciones
   - mvn sonar:sonar \
     -Dsonar.projectKey=mamonreal_santatecla-relaciones-1 \
     -Dsonar.organization=mamonreal-github \
