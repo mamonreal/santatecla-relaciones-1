@@ -21,4 +21,4 @@ script:
     -Dsonar.projectKey=mamonreal_santatecla-relaciones-1 \
     -Dsonar.organization=mamonreal-github \
     -Dsonar.host.url=https://sonarcloud.io \
-    -Dsonar.login=$SONARCLOUD
+    -Dsonar.login=SONARCLOUD
