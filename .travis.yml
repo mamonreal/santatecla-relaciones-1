@@ -4,8 +4,6 @@ jdk:
 addons:
   sonarcloud:
     organization: "mamonreal-github"
-    token:
-      secure: "wMlnXUdukP6M4SwCCjwA1MJ7pGxdx1IEiAs5Wv3HSItt2c+r85KMf43qvHbBSqKgM5bpletcDBQPEe6OvaZXjeZfZoYKKLgBMt9EhcMQHtzzIWv+vICrDMR8xeGTFo7fIcLgIdKutFeeuBcnPQEQaIXYQlitDLtSCNjUSt4L/G4Wp2Wcb/SM1FOMi+HxNYPG0spwFaerzqCrKqOGHh9W+LhwtVe4R3aGw47/MiCyn+jQ4E+tjXhpvfVfKaVLYR42ThbaDs+JlpZ+FmdYIZZ+E0X+uMllREaRl3lILfFcRijtJnxhKfxX5cuyxnPKmLgEJ/0Hu4TO9JErb8SWHVUwt/6tnHN3d9ihDrODhoFSz0MGV8R5hHrwjzcxigA/tNgE5wF9u5+wUttlh13+lcVVYzqZU9NSeEtnYtKGV19CzLF9FwCF2tSJ5DTN1cfyBb1Ly6Z63xEs1Ev8Xay7JI7a62lrgStNJlYi0ygezZaf20pX/fsxAKs9TytUHsSmWMfWBKRYFOVCQFpVNJBUSOSe6QJcTcGn7g/3aWe/zzRWmoGb0tl+4d+y9ER5uXoEFGto3i3bcxun4s4di7i2HsUl+aszLdey/TVDcx+oAZ/DWjAfBEgweY4EZ+QhyETUfm9fTQjmxP0meFolkFL2RDCcMCepgP+lJeJxdwOnHbBzQ4o="
 
 languaje: java
 jdk: 
@@ -27,4 +25,4 @@ stage: sonar
 script:
   - cd backend/relaciones
   - mvn clean install
-  - mvn eclipse:clean clean org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
+  - mvn eclipse:clean clean org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar -Dsonar.login=${SONAR_TOKEN}
