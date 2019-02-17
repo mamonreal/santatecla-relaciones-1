@@ -26,4 +26,4 @@ script:
 stage: sonar
 script:
   - cd backend/relaciones
-  - mvn eclipse:clean clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  - mvn eclipse:clean clean build org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
