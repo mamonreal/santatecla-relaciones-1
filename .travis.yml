@@ -27,4 +27,4 @@ stage: sonar
 script:
   - cd backend/relaciones
   - mvn clean install
-  - sonar-scaner
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
